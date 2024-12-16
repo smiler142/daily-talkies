@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::before,
+*::after {
+    display: block;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+svg,
+li {
+    display: block;
+    width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #E6E6E6;
+    background-color: #f5f5f5;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    color: #3E3232fb;
+}
+
+button {
+    width: max-content;
+    display: block;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    color: #3E3232fb;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: #3e32320d;
+    cursor: pointer;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+.main_heading_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.main_heading {
+    color: #000000;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: capitalize;
+}
+
+.main_heading::before {
+    content: "";
+    width: 4px;
+    height: 10px;
+    background-color: red;
+    border-radius: 12px;
+}
+
+.swiper-wrapper {
+    align-items: start;
+}
+
+.swiper_button_wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.next_button,
+.prev_button {
+    all: unset;
+    background-color: #F5F5F5;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.swiper_button_wrap button.swiper-button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.prev_button {
+    transform: scaleX(-1);
+}
+
+/* .swiper_button_wrap button:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
+
+/* .layout_container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+} */
+
+.errorPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+.errorPageHeading {
+    font-size: 192px;
+    color: #FC4308;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 44px #ff000059;
+}
+
+.errorPageMessage {
+    font-size: 20px;
+    color: #3E3232bf;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error_message {
+    color: red;
+    font-weight: 400;
+    margin: 8px 0px 0px 8px;
+}
+
+.pagination_wrap {
+    max-width: 1512px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 45px auto;
+}
+
+.pagination_bullet {
+    color: #3E3232;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.pagination_bullet:not(:last-of-type)::after {
+    content: ">";
+    margin: 0px 5px;
+    color: #3E323280;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pagination_bullet:last-of-type {
+    color: #3E323280;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+@media screen and (max-width: 1536px) {
+
+    .layout_content,
+    .pagination_wrap {
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .pagination_wrap {
+        margin: 24px 0px;
+    }
+
+    .errorPageContainer {
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .errorPageHeading {
+        font-size: 120px;
+        margin-bottom: 30px;
+        text-shadow: 0px 0px 44px #ff000059;
+    }
+
+    .errorPageMessage {
+        font-size: 16px;
+        color: #3E3232bf;
+        margin-bottom: 20px;
+    }
+}

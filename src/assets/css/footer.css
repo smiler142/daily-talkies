@@ -1,0 +1,229 @@
+.footer_main,
+.footer_right_wrap {
+    padding: 40px 0px;
+    display: flex;
+    align-items: start;
+    gap: 24px;
+}
+
+.footer_left_wrap {
+    max-width: 948px;
+    background-color: #F5F5F5;
+    width: 100%;
+    padding: 40px 40px 40px 0px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.footer_inner_wrap {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 30px 10%;
+    padding-left: 15%;
+    margin-bottom: 40px;
+}
+
+.footer_main .main_heading {
+    margin-bottom: 20px;
+}
+
+.mega_news_cont {
+    color: #000000bf;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-left: 10px;
+    text-align: justify;
+    max-width: 360px;
+    color: hsla(0, 11%, 22%, 0.664);
+}
+
+.nl_subscription_wrap {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 14px 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nl_subscription_input {
+    all: unset;
+    cursor: text;
+    font-size: 16px;
+    color: #000000;
+    width: 100%;
+}
+
+.nl_subscription_wrap_icon {
+    width: 20px;
+}
+
+.footer_category_list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    padding-left: 10px;
+}
+
+.footer_category_link {
+    color: #3E3232;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.footer_social_network_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer_social_network_link {
+    padding: 8px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer_social_network_link:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.footer_social_network_icon {
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+.footer_links {
+    padding: 16px;
+    padding-left: 15%;
+    border-radius: 0px 12px 12px 0px;
+    background-color: #3e32320d;
+    color: #000000bf;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    grid-area: 3 / 1 / 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_links_list {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer_link_item:not(:first-of-type)::before {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #000000bf;
+}
+
+.footer_link_item {
+    display: flex;
+    gap: 6px;
+    color: #000000bf;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.footer_link_item:hover {
+    color: #000000;
+}
+
+.footer_comment_list {
+    max-width: 360px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_comment_item {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #F5F5F5;
+}
+
+.footer_comment_name {
+    color: #000000;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer_comment_body {
+    color: #3e3232bf;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.footer_insta_grid {
+    max-width: 360px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.footer_insta_img_item {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.footer_insta_img_item img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.footer_insta_img_item:hover img {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1600px) {
+    .footer_comments {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1439px) {
+
+    .footer_right_wrap {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer_inner_wrap,
+    .footer_links {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer_main {
+        display: none;
+    }
+}

@@ -1,0 +1,357 @@
+.layout_content {
+    max-width: 1512px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post_container {
+    padding: 50px 0px;
+    overflow: hidden;
+}
+
+.post_container:first-of-type {
+    padding-top: 0px;
+}
+
+.post_slide {
+    flex: 1 0 auto;
+    padding: 10px;
+    border-radius: 12px;
+    /* max-width: 360px; */
+    width: auto;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 32px #00000012;
+}
+
+.post_slide_img {
+    width: 100%;
+    aspect-ratio: 1.8;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.post_slide_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post_slide:hover .post_slide_img img {
+    transform: scale(1.1);
+}
+
+.post_title {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 16px 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+}
+
+.post_content {
+    color: #3E3232fe;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0px 6px 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+}
+
+.post_slide_user {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post_slide_user_img {
+    flex: 0 0 auto;
+    width: 44px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.post_slide_user_name,
+.post_slide_user_date {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+}
+
+.post_slide_user_date {
+    margin-top: 8px;
+    color: #3e3232bf;
+}
+
+.post_slide_bookmark {
+    width: 24px;
+    aspect-ratio: 1;
+    margin-left: auto;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.bookmark-icon {
+    cursor: pointer;
+    stroke: #3E323280;
+    stroke-width: 2;
+    transition: fill 0.3s ease;
+}
+
+.bookmark-icon path {
+    fill: #f5f5f5;
+}
+
+.bookmark-icon.filled {
+    stroke: none;
+    stroke-width: none;
+}
+
+.bookmark-icon.filled path {
+    fill: #F81539fb;
+}
+
+/* .latest_video_container {
+    background-color: #F5F5F5;
+} */
+
+.swiper-slide.video_slide {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.675;
+}
+
+.video_slide_overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 32px);
+    margin: 0 auto 16px;
+    z-index: 1;
+    padding: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffffbf;
+    backdrop-filter: blur(10px);
+}
+
+.video_title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+.video_content {
+    color: #3E3232fe;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.video_player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoPlayBtn {
+    width: 100px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    z-index: 1;
+    background-color: #ffffffbf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* ----------------- */
+
+/* .post_container:has(.weather_container) {
+    background-color: #F5F5F5;
+} */
+
+.weather_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.weather_card {
+    max-width: 360px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(135deg, rgb(45, 5, 247), rgb(234, 95, 219));
+}
+
+.weather_card_inner_wrap {
+    padding: 25px;
+    backdrop-filter: blur(2px) contrast(0.5) brightness(0.8);
+}
+
+.weather_card_degree_img {
+    width: 100px;
+    aspect-ratio: 1;
+    margin: auto;
+}
+
+.weather_card_degree_value {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.weather_card_details_location {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.weather_card_details_date {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.weather_card_main {
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.svg-inline--fa {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.weather_card_details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.weather_card_details_card {
+    flex: 0 0 calc(50% - 8px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather_card_detail_icon {
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+.weather_card_detail_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_value {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.detail_label {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .videoPlayBtn {
+        width: 80px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main_heading_wrap {
+        margin-bottom: 20px;
+    }
+
+    .post_container {
+        padding: 40px 0px;
+    }
+
+    .swiper-slide.video_slide {
+        aspect-ratio: unset;
+        background-color: #3e32320d;
+    }
+
+    .video_player {
+        aspect-ratio: 1.675;
+        border-radius: 12px 12px 0px 0px;
+        overflow: hidden;
+    }
+
+    .video_slide_overlay {
+        width: 100%;
+        position: unset;
+        margin: unset;
+        border-radius: 0px;
+        background-color: unset;
+    }
+
+    .latest_video_container {
+        margin: 0 -10px;
+        padding: 40px 10px;
+    }
+}
