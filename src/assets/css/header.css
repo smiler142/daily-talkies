@@ -1,5 +1,5 @@
 .header_container {
-    max-width: 1512px;
+    max-width: 1600px;
     width: 100%;
     margin: 0px auto;
 }
@@ -25,6 +25,7 @@
 }
 
 .categories_container {
+    margin-bottom: 45px;
     border-radius: 12px;
     box-shadow: 0 4px 20px 0 #0000001f;
 }

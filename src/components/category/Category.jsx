@@ -39,7 +39,7 @@ const Category = () => {
                         },
                         user: {
                             name: article.author || 'Anonymous',
-                            image: 'https://via.placeholder.com/50',
+                            image: `https://randomuser.me/api/portraits/men/${index}.jpg`,
                         },
                         date: new Date(article.publishedAt).toLocaleDateString() || 'Unknown Date',
                         raw: article,
@@ -105,10 +105,10 @@ const Category = () => {
                 <h3 className="main_heading">Category : <span>{keyWord}</span></h3>
             </div>
             <div className="category_inner_wrap">
-                {paginatedPosts.map((post) => (
+                {paginatedPosts.map((post, index) => (
                     <div key={post.id} className="post_slide" title={post.title}>
                         <NavLink to={`/article/${post.key}/${post.id}`}>
-                            <div className="post_slide_img">
+                            <div className={`post_slide_img ${post.image === 'https://via.placeholder.com/150' ? 'loading' : ''}`}>
                                 <img src={post.image} alt={post.title} />
                             </div>
                             <h4 className="post_title">{post.title}</h4>

@@ -9,7 +9,7 @@ const layout = () => {
     <>
       <div className="layout_container">
         <Header />
-        <Pagination />
+        {/* <Pagination /> */}
         <div className="layout_content">
           <Outlet />
         </div>

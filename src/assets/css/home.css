@@ -1,5 +1,5 @@
 .layout_content {
-    max-width: 1512px;
+    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
 }
@@ -39,6 +39,40 @@
 
 .post_slide:hover .post_slide_img img {
     transform: scale(1.1);
+}
+
+@keyframes backgroundMove {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.post_slide_img.loading {
+    display: block;
+    position: relative;
+    background: linear-gradient(110deg, #e5e5e5 20%, #ffffff 25%, #ffffff 30%, #e5e5e5 35%, #e5e5e5 65%, #ffffff 70%, #ffffff 75%, #e5e5e5 80%);
+    background-size: 200%;
+    background-position: 100% 0;
+    animation: backgroundMove 2500ms infinite linear;
+}
+
+.post_slide_img.loading img {
+    opacity: 0;
+}
+
+.post_slide_img.loading:after,
+.post_slide_img.loading::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../../../public/daily_talkies.png") no-repeat;
+    background-size: 80%;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    display: block;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .post_title {
@@ -323,12 +357,72 @@
 }
 
 @media screen and (max-width: 767px) {
+
+    .weather_card_inner_wrap {
+        padding: 16px;
+    }
+
+    .weather_container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        overflow: scroll hidden;
+    }
+
+    .weather_card {
+        max-width: 400px;
+        flex: 0 0 auto;
+    }
+
+    /* .weather_container .weather_card:nth-last-child(-n+6) {
+        display: none;
+    } */
+
+    .weather_card_degree_img {
+        width: 60px;
+    }
+
+    .weather_card_degree_value {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .weather_card_main {
+        padding-bottom: 24px;
+        display: grid;
+        grid-template: repeat(2, auto)/repeat(2, auto);
+        place-items: center;
+        gap: 10px 0px;
+    }
+
+    .weather_card_details_location,
+    .weather_card_details_date {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .weather_card_detail_icon {
+        width: 24px;
+    }
+
+    .weather_card_details {
+        gap: 12px;
+    }
+
+    .detail_value {
+        font-size: 16px;
+    }
+
+    .detail_label {
+        font-size: 12px;
+    }
+
     .main_heading_wrap {
         margin-bottom: 20px;
     }
 
     .post_container {
-        padding: 40px 0px;
+        padding: 24px 0px;
     }
 
     .swiper-slide.video_slide {

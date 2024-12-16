@@ -351,7 +351,7 @@
     .article_details_wrap {
         display: flex;
         flex-direction: column;
-        gap: 50px 24px;
+        gap: 30px 24px;
     }
 
     .ad_author_wrap {

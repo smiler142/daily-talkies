@@ -58,7 +58,7 @@ const ArticleDetails = () => {
             <div className="ad_content">
                 <div className="ad_header">
                     <h3 className="ad_heading" title={post.title}>{post.title}</h3>
-                    <div className="ad_img">
+                    <div className={`post_slide_img ad_img ${post.image === 'https://via.placeholder.com/150' ? 'loading' : ''}`}>
                         <img src={post.image || 'https://via.placeholder.com/150'} alt={post.title || 'No Title'} />
 
                         <div className="ad_sub_header">

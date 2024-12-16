@@ -30,7 +30,7 @@ const FooterInstagram = () => {
     }, [key]);
 
     if (!photoData.length) {
-        return <div>Loading...</div>;
+        return <></>;
     }
 
     return (
