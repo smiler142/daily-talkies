@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { storeToLocalStorage, fetchFromLocalStorage, fetchData, fetchFromDatabase, toggleBookmark, initializeSwiper } from '../../utils/Utils';
-import 'swiper/css/bundle';
 import config from "../../../../config"
 import { NavLink } from 'react-router-dom';
-import userImg from "../../../assets/images/user_img.jpg"
-
 
 const PostSlider = ({ title, localStorageKey, swiperClass }) => {
     const [posts, setPosts] = useState([]);
@@ -69,13 +66,15 @@ const PostSlider = ({ title, localStorageKey, swiperClass }) => {
 
 
     useEffect(() => {
-        const slidesPerViewConfig = {
-            540: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2 },
-            900: { slidesPerView: 3 },
-            1200: { slidesPerView: 4, spaceBetween: 24 },
+        const slidesConfig = {
+            breakpoints: {
+                540: { slidesPerView: 1.5 },
+                768: { slidesPerView: 2 },
+                900: { slidesPerView: 3 },
+                1200: { slidesPerView: 4, spaceBetween: 24 },
+            },
         };
-        const swiper = initializeSwiper(`.${swiperClass}`, slidesPerViewConfig);
+        const swiper = initializeSwiper(`.${swiperClass}`, slidesConfig);
 
         return () => swiper.destroy(true, true);
     }, [posts, swiperClass]);
@@ -99,7 +98,7 @@ const PostSlider = ({ title, localStorageKey, swiperClass }) => {
             </div>
             <div className={swiperClass}>
                 <div className="swiper-wrapper">
-                    {posts.map((post,index) => (
+                    {posts.map((post, index) => (
                         <div key={post.id} className="swiper-slide post_slide">
                             <NavLink to={`/article/${post.key}/${post.id}`}>
                                 <div className={`post_slide_img ${post.image === 'https://via.placeholder.com/150' ? 'loading' : ''}`}>

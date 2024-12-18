@@ -17,6 +17,7 @@ const Loader = () => {
             fontSize: "50px",
             lineHeight: "1",
             fontWeight: "600",
+            position: "relative"
         },
     };
 

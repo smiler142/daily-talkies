@@ -67,7 +67,7 @@ export const toggleBookmark = (id, setFilledItems, event) => {
 };
 
 
-export const initializeSwiper = (selector, slidesPerViewConfig) => {
+export const initializeSwiper = (selector, slidesConfig) => {
 
     const container = document.querySelector(selector).closest(".post_container");
     const prevButton = container.querySelector(".prev_button");
@@ -77,10 +77,16 @@ export const initializeSwiper = (selector, slidesPerViewConfig) => {
         loop: false,
         spaceBetween: 20,
         slidesPerView: 1,
-        breakpoints: slidesPerViewConfig,
         navigation: {
             prevEl: prevButton,
             nextEl: nextButton,
         },
+        pagination: {
+            el: container.querySelector(".swiper-pagination"),
+            dynamicBullets: true,
+            dynamicMainBullets: 3,
+            clickable: true,
+        },
+        ...slidesConfig
     });
 };
